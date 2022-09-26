@@ -1,3 +1,5 @@
+package Programs;
+
 import java.util.*;
 
 public class DivisionWithoutDivision {
@@ -10,25 +12,32 @@ public class DivisionWithoutDivision {
         int m = in.nextInt();
         in.nextLine();
         int i = 0;
-        while (n > 0) {
-            n = n - m;
-            i += 1;
+        boolean quit = false;
+        boolean print = true;
+        int dot = 0;
+        while ((!quit) && (n > 0)) {
+            while (n >= m) {
+                n = n - m;
+                i += 1;
+            }
+            if (n == 0) {
+                System.out.print(i);
+                quit = true;
+                print = false;
 
-        }
-        if (n == 0) {
-            System.out.println("Answer: " + i);
+            } else {
+                n = n + n + n + n + n + n + n + n + n + n;
+            }
+            if (print && dot == 0) {
+                System.out.print(i + ".");
+                i = 0;
+                dot += 1;
 
-        } else {
-            int remainder = (n + m);
-            // System.out.print(i + ".");
-            // int j = 0;
-            // while (remainder > 0) {
-            // remainder = remainder - m;
-            // j += 1;
+            } else if (print && dot != 0) {
+                System.out.print(i);
+                i = 0;
 
-            // }
-            // System.out.print(j);
-            System.out.println("Answer: " + (i - 1) + " Remainder: " + remainder);
+            }
 
         }
 
