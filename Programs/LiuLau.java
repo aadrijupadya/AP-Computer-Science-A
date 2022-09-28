@@ -14,12 +14,47 @@ public class LiuLau {
         boolean sorted = false;
         int min = 0;
         int tmp = 0;
-        if (a < b) {
-            tmp = a;
-            a = b;
-            tmp = b;
+
+        while ((a < b) || (b < c) || (c < d) || (d < e) || (e < f) || (f < g)) {
+            System.out.println("sorting");
+            if (a < b) {
+                tmp = a;
+                a = b;
+                tmp = b;
+
+            } else if (b < c) {
+                tmp = b;
+                b = c;
+                tmp = c;
+
+            }
+
+            else if (c < d) {
+                tmp = c;
+                c = d;
+                tmp = d;
+
+            } else if (d < e) {
+                tmp = d;
+                d = e;
+                tmp = e;
+
+            } else if (e < f) {
+                tmp = e;
+                e = f;
+                tmp = f;
+
+            }
+
+            else if (f < g) {
+                tmp = f;
+                f = g;
+                tmp = g;
+
+            }
 
         }
+        System.out.println(a + " " + b + " " + c + " " + d + " " + e + " " + f + " " + g);
 
         return median;
     }
@@ -51,7 +86,7 @@ public class LiuLau {
         input.nextLine();
         System.out.println("Mean of numbers: " + mean(a, b, c, d, e, f, g));
         System.out.println("Median of numbers: " + median(a, b, c, d, e, f, g));
-        System.out.println("Mode of numbers: " + mode(a, b, c, d, e, f, g));
+        // System.out.println("Mode of numbers: " + mode(a, b, c, d, e, f, g));
 
         input.close();
 

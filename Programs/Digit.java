@@ -11,7 +11,6 @@ public class Digit {
         boolean one = false;
         boolean two = false;
         boolean seven = false;
-        int count = 0;
         while (!end) {
             if (n % 10 == 1) {
                 one = true;
@@ -36,6 +35,7 @@ public class Digit {
         } else if (one || seven || two) {
             System.out.print("true");
         }
+        input.close();
 
     }
 

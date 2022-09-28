@@ -85,41 +85,6 @@
 
 // }
 
-// package Programs;
-
-// import java.util.*;
-
-// public class Review {
-//     public static void main(String[] args) {
-//         Scanner input = new Scanner(System.in);
-//         System.out.println("enter two integers that you want to find LCM of");
-//         int a = input.nextInt();
-//         input.nextLine();
-//         int b = input.nextInt();
-//         input.nextLine();
-//         boolean end = false;
-//         if (b > a) {
-//             int temp = a;
-//             a = b;
-//             b = temp;
-
-//         }
-//         System.out.println(a + " " + b);
-//         int i = b;
-//         System.out.println(i);
-//         while (!end) {
-//             if ((i % a == 0) && (i % b == 0)) {
-//                 end = true;
-//             } else {
-//                 i += b;
-//             }
-
-//         }
-//         System.out.println("LCM of " + a + " and " + b + ": " + i);
-
-//     }
-// }
-
 package Programs;
 
 import java.util.*;
@@ -132,8 +97,6 @@ public class Review {
         input.nextLine();
         int b = input.nextInt();
         input.nextLine();
-        int c = input.nextInt();
-        input.nextLine();
         boolean end = false;
         if (b > a) {
             int temp = a;
@@ -141,25 +104,62 @@ public class Review {
             b = temp;
 
         }
-
-        if (c > a) {
-            int temp = a;
-            a = c;
-            c = temp;
-
-        }
-
-        if (c > b) {
-            int temp = b;
-            b = c;
-            c = temp;
+        System.out.println(a + " " + b);
+        int i = b;
+        System.out.println(i);
+        while (!end) {
+            if ((i % a == 0) && (i % b == 0)) {
+                end = true;
+            } else {
+                i += b;
+            }
 
         }
-        System.out.println(a + " " + b + " " + c);
-
-        if (a - b == b - c) {
-            System.out.println("Hella lit");
-        }
+        System.out.println("LCM of " + a + " and " + b + ": " + i);
 
     }
 }
+
+// package Programs;
+
+// import java.util.*;
+
+// public class Review {
+// public static void main(String[] args) {
+// Scanner input = new Scanner(System.in);
+// System.out.println("enter two integers that you want to find LCM of");
+// int a = input.nextInt();
+// input.nextLine();
+// int b = input.nextInt();
+// input.nextLine();
+// int c = input.nextInt();
+// input.nextLine();
+// boolean end = false;
+// if (b > a) {
+// int temp = a;
+// a = b;
+// b = temp;
+
+// }
+
+// if (c > a) {
+// int temp = a;
+// a = c;
+// c = temp;
+
+// }
+
+// if (c > b) {
+// int temp = b;
+// b = c;
+// c = temp;
+
+// }
+// System.out.println(a + " " + b + " " + c);
+
+// if (a - b == b - c) {
+// System.out.println("Hella lit");
+// }
+
+// }
+// }
