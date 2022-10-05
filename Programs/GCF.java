@@ -1,4 +1,5 @@
 package Programs;
+
 import java.util.*;
 
 public class GCF {
@@ -21,7 +22,7 @@ public class GCF {
                     GCF = count;
                 }
             }
-            count = count - 1;
+            count--;
 
         }
         System.out.println(GCF);
