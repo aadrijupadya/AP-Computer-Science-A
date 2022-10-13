@@ -116,6 +116,7 @@ public class Review {
 
         }
         System.out.println("LCM of " + a + " and " + b + ": " + i);
+        input.close();
 
     }
 }

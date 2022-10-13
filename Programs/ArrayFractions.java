@@ -161,6 +161,7 @@ public class ArrayFractions {
         int GCF = GCF(frac[0], frac[1]);
         frac[0] /= GCF;
         frac[1] /= GCF;
+        System.out.println("Simplified fraction: " + frac[0] + "/" + frac[1]);
         return frac;
 
     }
@@ -203,6 +204,12 @@ public class ArrayFractions {
         }
         if (response.equals("Division")) {
             Div(fraction1, fraction2);
+
+        }
+
+        if (response.equals("Simplify")) {
+            Simplify(fraction1);
+            Simplify(fraction2);
 
         }
 

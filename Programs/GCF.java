@@ -11,7 +11,7 @@ public class GCF {
         in.nextLine();
         int y = in.nextInt();
         in.nextLine();
-        int n = 10;
+        // int n = 10;
         int GCF = 0;
         x = Math.max(x, y);
         y = Math.min(x, y);
@@ -26,6 +26,7 @@ public class GCF {
 
         }
         System.out.println(GCF);
+        in.close();
 
     }
 
