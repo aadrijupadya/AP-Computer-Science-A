@@ -4,9 +4,12 @@ import java.util.*;
 
 public class ArrayHelper {
     public static void display(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
+        System.out.println();
+        for (int temp : a) {
+
+            System.out.print(temp + " ");
         }
+        System.out.println();
     }
 
     public static int[] addEnd(int[] a, int b) {
@@ -33,7 +36,7 @@ public class ArrayHelper {
 
     }
 
-    public static int[] addMid(int[] a, int b, int loc) {
+    public static int[] addEnd(int[] a, int b, int loc) {
         int[] result = new int[a.length + 1];
         for (int i = 0; i < a.length + 1; i++) {
             if (i < loc - 1)
@@ -52,7 +55,7 @@ public class ArrayHelper {
 
     }
 
-    public static int[] removeMid(int[] a, int loc) {
+    public static int[] removeEnd(int[] a, int loc) {
         int[] result = new int[a.length - 1];
         boolean flag = false;
 
@@ -115,12 +118,12 @@ public class ArrayHelper {
         display(remove);
 
         int[] mid = new int[length + 1];
-        mid = addMid(array, 0, 0);
+        mid = addEnd(array, 0, 0);
         System.out.println("Array with new element at specified index");
         display(mid);
 
         int[] remid = new int[length - 1];
-        remid = removeMid(array, 2);
+        remid = removeEnd(array, 2);
         System.out.println("Array with removed element at specified index");
         display(remid);
 
@@ -133,3 +136,9 @@ public class ArrayHelper {
 
     }
 }
+
+/*
+ * For each loop
+ * for ( int temp : x)
+ * System.out.println(temp);
+ */

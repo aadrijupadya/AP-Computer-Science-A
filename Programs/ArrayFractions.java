@@ -44,6 +44,7 @@ public class ArrayFractions {
     }
 
     public static void Add(int[] frac1, int[] frac2) {
+        int[] finalfrac = new int[2];
         int x = frac1[0];
         int y = frac1[1];
         int z = frac2[0];
@@ -53,21 +54,16 @@ public class ArrayFractions {
         int decoy3 = frac2[0];
         int decoy4 = frac2[1];
 
-        int tmp = 0;
-        if (y >= a) {
-            tmp = y;
-            y = a;
-            a = tmp;
-        }
         int LCM = LCM(a, y);
         x *= (LCM / y);
         z *= (LCM / a);
         y = LCM;
         a = LCM;
+        System.out.print("LCM: " + LCM);
 
         int finalnum = x + z;
         int finaldem = a;
-        int[] finalfrac = new int[2];
+
         finalfrac[0] = finalnum;
         finalfrac[1] = finaldem;
         finalfrac = Simplify(finalfrac);
@@ -88,12 +84,6 @@ public class ArrayFractions {
         int decoy3 = frac2[0];
         int decoy4 = frac2[1];
 
-        int tmp = 0;
-        if (y >= a) {
-            tmp = y;
-            y = a;
-            a = tmp;
-        }
         int LCM = LCM(a, y);
         x *= (LCM / y);
         z *= (LCM / a);
