@@ -1,7 +1,5 @@
 package Programs;
 
-import java.util.*;
-
 public class ArrayHelper {
     public static void display(int[] a) {
         System.out.println();
@@ -12,7 +10,7 @@ public class ArrayHelper {
         System.out.println();
     }
 
-    public static int[] addEnd(int[] a, int b) {
+    public static int[] addMid(int[] a, int b) {
         int[] result = new int[a.length + 1];
         for (int i = 0; i < a.length; i++) {
             result[i] = a[i];
@@ -25,7 +23,7 @@ public class ArrayHelper {
 
     }
 
-    public static int[] removeEnd(int[] a) {
+    public static int[] removeMid(int[] a) {
         int[] result = new int[a.length - 1];
         for (int i = 0; i < a.length - 1; i++) {
             result[i] = a[i];
@@ -36,7 +34,18 @@ public class ArrayHelper {
 
     }
 
-    public static int[] addEnd(int[] a, int b, int loc) {
+    public static int[] reverseArray(int[] a) {
+        int[] result = new int[a.length];
+        for (int i = 0; i < a.length; i++) {
+            result[i] = a[a.length - i - 1];
+
+        }
+
+        return result;
+
+    }
+
+    public static int[] addMid(int[] a, int b, int loc) {
         int[] result = new int[a.length + 1];
         for (int i = 0; i < a.length + 1; i++) {
             if (i < loc - 1)
@@ -55,7 +64,28 @@ public class ArrayHelper {
 
     }
 
-    public static int[] removeEnd(int[] a, int loc) {
+    public static boolean existsinArray(int[] a, int b) {
+        boolean exists = false;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == b)
+                exists = true;
+
+        }
+
+        return exists;
+    }
+
+    public static int numberOf(int[] a, int b) {
+        int cnt = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == b)
+                cnt++;
+        }
+
+        return cnt;
+    }
+
+    public static int[] removeMid(int[] a, int loc) {
         int[] result = new int[a.length - 1];
         boolean flag = false;
 
@@ -95,50 +125,4 @@ public class ArrayHelper {
 
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How many elements do you want to enter in your array?");
-        int length = scanner.nextInt();
-        int[] array = new int[length];
-        for (int i = 0; i < length; i++) {
-            System.out.println("Enter the element");
-            int input = scanner.nextInt();
-            array[i] = input;
-
-        }
-        int[] add = new int[length + 1];
-
-        add = addEnd(array, 2);
-        System.out.println("Array with new element");
-        display(add);
-
-        int[] remove = new int[length - 1];
-        remove = removeEnd(array);
-        System.out.println("Array with removed element");
-        display(remove);
-
-        int[] mid = new int[length + 1];
-        mid = addEnd(array, 0, 0);
-        System.out.println("Array with new element at specified index");
-        display(mid);
-
-        int[] remid = new int[length - 1];
-        remid = removeEnd(array, 2);
-        System.out.println("Array with removed element at specified index");
-        display(remid);
-
-        int[] replace = new int[length];
-        replace = replace(array, 100, 3);
-        System.out.println("Array with replaced element at specified index");
-        display(replace);
-
-        scanner.close();
-
-    }
 }
-
-/*
- * For each loop
- * for ( int temp : x)
- * System.out.println(temp);
- */

@@ -52,6 +52,7 @@ public class Arrays {
             System.out.print(numbers[i] + " ");
 
         }
+        Shoe converse = new Shoe(3, "red");
 
         input.close();
     }
