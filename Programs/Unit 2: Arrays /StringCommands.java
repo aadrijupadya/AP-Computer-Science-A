@@ -1,4 +1,4 @@
-package Programs;
+ 
 
 public class StringCommands {
     public static void shiftLeft(int[] arr) {

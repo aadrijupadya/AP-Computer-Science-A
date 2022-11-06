@@ -1,6 +1,4 @@
-package Programs;
-
-import java.util.*;
+ import java.util.*;
 
 public class TicTacToe {
     public static void display(String[][] board) {

@@ -1,9 +1,9 @@
-package Programs;
+ ;
 
 import java.util.*;
 
 public class Digit {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
         input.nextLine();

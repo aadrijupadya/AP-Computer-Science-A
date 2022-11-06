@@ -1,5 +1,4 @@
-package Programs;
-
+ 
 public class Shoe { // variable type creation
     // attributes
     private int size;

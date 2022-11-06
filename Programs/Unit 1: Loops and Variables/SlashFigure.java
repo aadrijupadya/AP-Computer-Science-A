@@ -1,4 +1,4 @@
-package Programs;
+ ;
 
 public class SlashFigure {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Programs;
+ 
 
 public class ArrayHelper {
     public static void display(int[] a) {
@@ -10,7 +10,7 @@ public class ArrayHelper {
         System.out.println();
     }
 
-    public static int[] addMid(int[] a, int b) {
+    public static int[] addEnd(int[] a, int b) {
         int[] result = new int[a.length + 1];
         for (int i = 0; i < a.length; i++) {
             result[i] = a[i];
@@ -23,7 +23,7 @@ public class ArrayHelper {
 
     }
 
-    public static int[] removeMid(int[] a) {
+    public static int[] removeEnd(int[] a) {
         int[] result = new int[a.length - 1];
         for (int i = 0; i < a.length - 1; i++) {
             result[i] = a[i];
