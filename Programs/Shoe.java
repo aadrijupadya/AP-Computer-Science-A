@@ -1,14 +1,16 @@
- 
+
 public class Shoe { // variable type creation
     // attributes
     private int size;
     private String color;
+    private Sock sock;
 
     // constructors
     // default
     public Shoe() {
         size = 7;
         color = "white";
+        sock = new Sock();
     }
 
     // custom
@@ -24,6 +26,10 @@ public class Shoe { // variable type creation
 
     public String getColor() {
         return color;
+    }
+
+    public Sock getSock() {
+        return sock;
     }
 
     // setter

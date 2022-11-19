@@ -1,4 +1,3 @@
- 
 
 public class ArrayHelper {
     public static void display(int[] a) {
