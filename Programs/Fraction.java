@@ -42,6 +42,15 @@ public class Fraction {
 
     }
 
+    public MixedFraction convertToMixed() {
+        MixedFraction b = new MixedFraction();
+        b.setNumerator(numerator % denominator);
+        b.setDenominator(denominator);
+        b.setWhole(numerator / denominator);
+
+        return b;
+    }
+
     public static int GCF(int a, int b) {
         int GCF = 0;
         int tmp = 0;

@@ -1,6 +1,21 @@
 public class LearningFile {
     public static void main(String[] args) {
-        rectangle x = new rectangle(5,5);
-        System.out.println(x.area());
+        Shoe x = new Heel(8, "blue", 3);
+        x.method1();
+        Footwear z = new Shoe();
+        Footwear y = new Heel();
+
+
+        Shoe[] box = new Shoe[3]; //legal
+        box[0] = x;
+        box[1] = new Shoe();
+    
+        //can't initialize this way 
+        //Heel to a shoe heel
+        Heel a = new Heel();
+        Shoe b = a;
+        //shoe/heel to a heel
+        Shoe c = new Heel();
+        Heel d = (Heel) c;
     }
 }

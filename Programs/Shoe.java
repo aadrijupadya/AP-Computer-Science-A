@@ -1,8 +1,9 @@
 
-public class Shoe { // variable type creation
+public class Shoe implements Footwear { // variable type creation
     // attributes
     private int size;
     private String color;
+    // private ensures that these variables cannot be accessed without getters
     private Sock sock;
 
     // constructors
@@ -37,8 +38,17 @@ public class Shoe { // variable type creation
         size = s;
     }
 
-    public void setColor(String c) {
-        color = c;
+    public void setColor(String color) {
+        this.color = color;
+        // differentiates between private variable and variable that is passed in
     }
+
+    public void method1() { // nonstatic methods require creation of a variable of an object before
+                                 // initializing
+        System.out.println("Nice kicks!");
+    }
+
+    // static methods do not require objects, but cannot use anything from object
+    // file (getters, setters, variables, etc.)
 
 }

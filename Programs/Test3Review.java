@@ -33,7 +33,4 @@ public class Test3Review {
         return sum;
     }
 
-
-    
-
 }

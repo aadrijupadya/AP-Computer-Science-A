@@ -38,6 +38,10 @@ public class rectangle {
         return (2 * (length + width));
     }
 
+    public boolean isSquare() {
+        return length == width;
+    }
+
     public String toString() {
         return "the length and width are " + length + " x " + width;
     }

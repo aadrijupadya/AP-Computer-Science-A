@@ -1,4 +1,5 @@
 import java.util.*;
+import battlecode.common.*;
 
 public class Radical {
     public static void main(String[] args) {
