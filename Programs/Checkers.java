@@ -12,7 +12,7 @@ public class Checkers {
         }
     }
 
-    public static void makeMove(pieces[][] board, int row, int column) {
+    public static void makeMoveRight(pieces[][] board, int row, int column) {
         pieces p = board[row][column];
         if (board[row][column].canMove() && board[row+1][column+1].toString() == "-" && p.toString() == "B") {
             System.out.println(p);
@@ -28,7 +28,30 @@ public class Checkers {
             p.setY(row - 1);
             board[row-1][column+1] = p;
         }
-    
+        else {
+            System.out.println("Invalid move");
+        }
+    }
+
+    public static void makeMoveLeft(pieces[][] board, int row, int column) {
+        pieces p = board[row][column];
+        if (board[row][column].canMove() && board[row+1][column-1].toString() == "-" && p.toString() == "B") {
+            System.out.println(p);
+            board[row][column] = new pieces(row,column,false,"-");
+            p.setX(column - 1);
+            p.setY(row + 1);
+            board[row+1][column-1] = p;
+        }
+        else if (board[row][column].canMove()  &&  p.toString() == "R") {
+            System.out.println(p);
+            board[row][column] = new pieces(row,column,false,"-");
+            p.setX(column - 1);
+            p.setY(row - 1);
+            board[row-1][column-1] = p;
+        }
+        else {
+            System.out.println("Invalid move");
+        }
     }
 
 
@@ -53,7 +76,6 @@ public class Checkers {
                         board[i][j] = new pieces(i,j,false,"-");
                     }
                 }       
-
             }  
 
             if (i == 5 || i == 7) {
@@ -77,26 +99,36 @@ public class Checkers {
                         board[i][j] = new pieces(i,j,false,"-");
                     }
                 }       
-
             }  
             if (i == 3 || i == 4) {
                 for (int j = 0; j < board[0].length; j++) {
                      board[i][j] = new pieces(i,j,false,"-");
                 }
             }
-
         }
         return board;
         
     }
     public static void main(String[] args) {
+        Scanner pencil = new Scanner(System.in);
         pieces[][] pieceboard = new pieces[8][8];
         populate(pieceboard);
-        System.out.println(pieceboard[5][0]);
-        // display(pieceboard);
-        makeMove(pieceboard, 5,2 );
-        display(pieceboard);
-        
+        boolean endgame = false;
+        while (!endgame) {
+            display(pieceboard);
+            System.out.println("What row piece do you want to move?");
+            int a = pencil.nextInt();
+            System.out.println("What column piece do you want to move?");
+            int b = pencil.nextInt();
+            pencil.nextLine();
+            System.out.println("What direction do you want to move?");
+            String c = pencil.nextLine();
+            if (c.equals("l")) {
+                makeMoveLeft(pieceboard, a, b);
+            } else if (c.equals("r")) {
+                makeMoveRight(pieceboard, a, b);
+            }
+        }        
     }
 
 }

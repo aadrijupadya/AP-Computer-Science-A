@@ -38,9 +38,9 @@ public class RecursionPS4 {
             return;
         }
         System.out.println(bin.getNum());
-        if bin.getLeft() < bin.getRight() 
+        if (bin.getLeft() != null) 
             traverse(bin.getLeft());
-        else
+        else if (bin.getRight() != null)
             traverse(bin.getRight());
     } 
 
